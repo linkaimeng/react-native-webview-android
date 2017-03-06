@@ -49,7 +49,7 @@ public class RNWebViewManager extends SimpleViewManager<RNWebView> {
                     LayoutParams.MATCH_PARENT));
         CookieManager.getInstance().setAcceptCookie(true); // add default cookie support
         CookieManager.getInstance().setAcceptFileSchemeCookies(true); // add default cookie support
-
+        rnwv.addJavascriptInterface(new MyAndroid(rnwv),"myAndroid");
         return rnwv;
     }
 
